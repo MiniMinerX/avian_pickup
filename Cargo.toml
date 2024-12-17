@@ -40,7 +40,7 @@ features = [
 ]
 
 [dev-dependencies]
-avian3d = { git = "https://github.com/Jondolf/avian" }
+avian3d = 0.1.1
 bevy = { version = "0.14.2", features = ["dynamic_linking"] }
 avian_interpolation3d = { git = "https://github.com/janhohenheim/avian_interpolation" }
 
