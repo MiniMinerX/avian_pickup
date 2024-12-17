@@ -56,7 +56,7 @@ pub struct AvianPickupActor {
     /// [`RigidBody::Dynamic`] will be considered in the first place.\
     ///
     /// Default: Include all entities
-    pub prop_filter: &SpatialQueryFilter,
+    pub prop_filter: SpatialQueryFilter,
     /// The spatial query filter to use when looking for terrain that will block
     /// picking up a prop behind it.\
     /// Default: Include all entities
