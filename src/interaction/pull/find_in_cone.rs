@@ -5,7 +5,7 @@ use crate::{math::METERS_PER_INCH, prelude::*};
 pub(super) fn find_prop_in_cone(
     spatial_query: &SpatialQuery,
     origin: Transform,
-    config: &AvianPickupActor,
+    config: AvianPickupActor,
     q_collider: &Query<&Position>,
 ) -> Option<Prop> {
     const MAGIC_OFFSET_ASK_VALVE: f32 = 1.0 * METERS_PER_INCH;
