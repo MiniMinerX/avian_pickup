@@ -3,7 +3,7 @@ use crate::{math::METERS_PER_INCH, prelude::*};
 
 /// Inspired by [`CWeaponPhysCannon::FindObjectInCone`](https://github.com/ValveSoftware/source-sdk-2013/blob/master/mp/src/game/server/hl2/weapon_physcannon.cpp#L2690)
 pub(super) fn find_prop_in_cone(
-    spatial_query: &SpatialQuery,
+    spatial_query: &SpatialQueryFilter,
     origin: Transform,
     config: &AvianPickupActor,
     q_collider: &Query<&Position>,
@@ -20,7 +20,7 @@ pub(super) fn find_prop_in_cone(
         &box_collider,
         origin.translation,
         origin.rotation,
-        config.prop_filter.clone(),
+        &config.prop_filter,
     );
     let mut canditate = None;
 
