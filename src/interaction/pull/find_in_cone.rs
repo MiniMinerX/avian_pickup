@@ -20,7 +20,7 @@ pub(super) fn find_prop_in_cone(
         &box_collider,
         origin.translation,
         origin.rotation,
-        config.prop_filter,
+        config.prop_filter.clone(),
     );
     let mut canditate = None;
 
@@ -47,7 +47,7 @@ pub(super) fn find_prop_in_cone(
             los,
             dist,
             true,
-            config.obstacle_filter,
+            config.obstacle_filter.clone(),
             &|entity| q_collider.contains(entity),
         ) {
             let occluded = hit.entity != collider && hit.time_of_impact <= dist;
@@ -62,7 +62,7 @@ pub(super) fn find_prop_in_cone(
             los,
             dist,
             true,
-            config.prop_filter,
+            config.prop_filter.clone(),
             &|entity| q_collider.contains(entity),
         ) {
             if hit.entity == collider {
