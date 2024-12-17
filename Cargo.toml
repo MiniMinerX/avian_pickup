@@ -32,7 +32,7 @@ version = "0.14.2"
 default-features = false
 
 [dependencies.avian3d]
-git = "https://github.com/Jondolf/avian"
+version = "0.1"
 default-features = false
 features = [
     "3d",
