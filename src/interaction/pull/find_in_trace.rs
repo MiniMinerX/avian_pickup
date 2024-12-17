@@ -14,7 +14,7 @@ pub(super) fn find_prop_in_trace(
         origin.forward(),
         test_length,
         true,
-        &config.prop_filter,
+        config.prop_filter.clone(),
     );
 
     hit.filter(|hit| {
@@ -23,7 +23,7 @@ pub(super) fn find_prop_in_trace(
             origin.forward(),
             test_length,
             true,
-            &config.obstacle_filter,
+            config.obstacle_filter.clone(),
         ) {
             let occluded = terrain_hit.entity != hit.entity
                 && terrain_hit.time_of_impact <= hit.time_of_impact;
@@ -61,7 +61,7 @@ pub(super) fn find_prop_in_trace(
                 origin.forward(),
                 test_length,
                 false,
-                &config.obstacle_filter,
+                config.obstacle_filter.clone(),
             ) {
                 let occluded = terrain_hit.entity != hit.entity
                     && terrain_hit.time_of_impact <= hit.time_of_impact;
