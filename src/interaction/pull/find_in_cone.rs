@@ -20,7 +20,7 @@ pub(super) fn find_prop_in_cone(
         &box_collider,
         origin.translation,
         origin.rotation,
-        config.prop_filter.clone(),
+        &config.prop_filter,
     );
     let mut canditate = None;
 
