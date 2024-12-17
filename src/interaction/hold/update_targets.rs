@@ -147,7 +147,7 @@ fn set_targets(
             forward,
             max_cast_toi,
             true,
-            &terrain_filter,
+            terrain_filter,
         );
         let distance = if let Some(terrain_hit) = terrain_hit {
             let toi = terrain_hit.time_of_impact;
