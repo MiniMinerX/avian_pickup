@@ -51,7 +51,7 @@ pub(super) fn find_prop_in_trace(
             origin.forward(),
             test_length,
             false,
-            &config.prop_filter,
+            config.prop_filter.clone(),
         );
         hit.filter(|hit| {
             if let Some(terrain_hit) = spatial_query.cast_shape(
